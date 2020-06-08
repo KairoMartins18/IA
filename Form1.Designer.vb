@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -46,17 +46,17 @@ Partial Class Form1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(21, 30)
+        Me.TextBox1.Location = New System.Drawing.Point(21, 32)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(372, 43)
+        Me.TextBox1.Size = New System.Drawing.Size(372, 41)
         Me.TextBox1.TabIndex = 1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(416, 30)
+        Me.Button1.Location = New System.Drawing.Point(416, 32)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(169, 43)
+        Me.Button1.Size = New System.Drawing.Size(169, 41)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Enviar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -134,7 +134,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

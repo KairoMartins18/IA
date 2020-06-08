@@ -1,8 +1,11 @@
 ﻿
 Imports System.Speech.Synthesis
 Public Class Form1
-
+    'Original coding by kairo martins 18
     Dim falar As New SpeechSynthesizer()
+    Dim data As DateTime = Now
+
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If My.Settings.inicialc = False Then
             Form2.Show()
@@ -14,14 +17,16 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        cerebro()
+    End Sub
+
+    Private Sub cerebro()
 
 
 
 
-
-
-        If TextBox1.Text = "oi" Then
-            falar.Speak("olá")
+        If TextBox1.Text = "oi" OrElse TextBox1.Text = "Olá" OrElse TextBox1.Text = "Oi" Then
+            falar.Speak("Olá")
             ListBox1.Items.Add(TextBox1.Text)
             ListBox1.Items.Add("Olá")
             TextBox1.Clear()
@@ -31,7 +36,7 @@ Public Class Form1
 
         End If
 
-        If TextBox1.Text = "como vai?" Then
+        If TextBox1.Text = "como vai?" OrElse TextBox1.Text = "Como Vai Você" Then
             falar.Speak("Bem, estou sempre atualizando e Você")
             ListBox1.Items.Add(TextBox1.Text)
             ListBox1.Items.Add("Bem, estou sempre atualizando e Você")
@@ -103,15 +108,28 @@ Public Class Form1
             Exit Sub
         End If
 
+        If TextBox1.Text = "Que horas são?" OrElse TextBox1.Text = "que horas são?" OrElse TextBox1.Text = "que horas são" Then
+            falar.Speak("São " + DateTime.Now.ToShortTimeString)
+            ListBox1.Items.Add(TextBox1.Text)
+            ListBox1.Items.Add("São: " + DateTime.Now.ToShortTimeString)
+            TextBox1.Clear()
+            Exit Sub
+
+
+        End If
+#Region "Pesquisa - LEMBRE-SE OS COMANDOS DEVER SER ESCRITOS A CIMA"
+
+        If TextBox1.Text = "" Then
+            ListBox1.Items.Add("Digite algo na caixa de texto!")
+            Exit Sub
+        End If
+
         If TextBox1.Text >= "" Then
             ListBox1.Items.Add("Pesquisa: " + TextBox1.Text)
             diferente()
             Exit Sub
         End If
-
-
-
-
+#End Region
 
     End Sub
 
@@ -132,4 +150,6 @@ Public Class Form1
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
     End Sub
+
+
 End Class
